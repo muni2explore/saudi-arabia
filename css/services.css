@@ -1,0 +1,54 @@
+#homeCarouselCaptions {
+    background-size: cover;
+    background-position: center;
+}
+
+.services-heading{
+    font-size: 32px;
+}
+
+.service-featurette {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.green-text{
+    color: #32CD32;
+}
+
+.list-item {
+    margin-bottom: 20px;
+}
+
+.list-item svg {
+    margin-right: 10px; 
+}
+
+.feature {
+    background-color: #F8F9FA;
+    padding: 10px;
+}
+
+.custom-img-width {
+    width: 40px;
+}
+
+@media (max-width: 767px) {
+    .service-featurette {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .service-featurette .col-md-4 img{
+        margin-bottom: 30px;
+    }
+
+    .feature .col-md-4 img{
+        margin-bottom: 30px;
+    }
+
+    .list-item svg {
+        margin-right: 10px; 
+    }
+}
