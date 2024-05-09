@@ -3,8 +3,6 @@ name: StageSaudi
 on:
   workflow_dispatch:
 
-env: 
-  NODE_VERSION: 'v18.12.0'
 
 jobs:
   deploy:
@@ -13,16 +11,7 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@main
-    - name: Use Node.js ${{ env.NODE_VERSION }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ env.NODE_VERSION }}
     
-    - name: Install dependencies
-      run: yarn
-
-    - name: Build
-      run: yarn build:staging
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
