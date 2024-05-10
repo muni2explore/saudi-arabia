@@ -22,4 +22,4 @@ jobs:
 
     - name: Deploy
       if: success()
-      run: aws s3 sync ./ s3://saudi.nxgeninventors.com --exclude '.git/*'
+      run: aws s3 sync ./ s3://saudi.parav.com --exclude '.git/*'
