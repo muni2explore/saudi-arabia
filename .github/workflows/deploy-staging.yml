@@ -1,0 +1,25 @@
+name: StageSaudi
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@main
+    
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET_KEY }}
+        aws-region: eu-west-2
+
+    - name: Deploy
+      if: success()
+      run: aws s3 sync ./ s3://saudi.nxgeninventors.com --exclude '.git/*'
