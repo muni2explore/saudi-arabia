@@ -3,7 +3,7 @@
     background-position: center;
 }
 
-.services-heading{
+.services-heading {
     font-size: 32px;
 }
 
@@ -13,7 +13,7 @@
     padding: 10px;
 }
 
-.green-text{
+.green-text {
     color: #32CD32;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .list-item svg {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .feature {
@@ -35,7 +35,7 @@
 }
 
 /* contact-us */
-.form-control {
+.contactForm .form-control {
     height: 36px;
     background: #fff;
     color: rgba(0, 0, 0, 0.8);
@@ -44,6 +44,7 @@
     box-shadow: none !important;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .contactForm .form-control {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -51,39 +52,42 @@
 }
 
 
-.form-control:focus,.form-control:active {
+.contactForm .form-control:focus,
+.contactForm .form-control:active {
     border-color: #01d28e !important;
 }
-.form-label {
+
+.contactForm .form-label {
     color: #000;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
-.btn.btn-primary {
+
+.contactForm .btn.btn-primary {
     background: #01d28e !important;
     border-color: #01d28e !important;
     color: #fff;
     width: 100px;
-    border-radius: 0!important;
-    
+    border-radius: 0 !important;
+
 }
 
 .custom-size {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
-.custom-form-section{
+.custom-form-section {
     border-radius: 30px;
 }
 
 .custom-contact-section {
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-.location{
-    margin-top:100px;
+.location {
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -93,15 +97,15 @@
         margin-bottom: 0px;
     }
 
-    .service-featurette .col-md-4 img{
+    .service-featurette .col-md-4 img {
         margin-bottom: 30px;
     }
 
-    .feature .col-md-4 img{
+    .feature .col-md-4 img {
         margin-bottom: 30px;
     }
 
     .list-item svg {
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 }
