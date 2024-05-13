@@ -47,7 +47,7 @@
 <body class="home-pg">
 
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="images/logo/bc-logo.svg" alt="Logo" /></a>
         <div class="navbar-right">
@@ -92,7 +92,7 @@
           <div class="carousel-caption">
             <div class="container">
               <h5>Start shipping with BC logistics</h5>
-              <p>We are one of the safest logistics operators in the market.</p>
+              <p class="hide-on-xs-sm">We are one of the safest logistics operators in the market.</p>
               <div class="carousel-caption-links">
                 <a href="#" class="btn btn-primary">Track</a>
                 <a href="#" class="btn btn-primary">Contact Us</a>
@@ -105,7 +105,7 @@
           <div class="carousel-caption">
             <div class="container">
               <h5>Start shipping with BC logistics</h5>
-              <p>We are one of the safest logistics operators in the market.</p>
+              <p class="hide-on-xs-sm">We are one of the safest logistics operators in the market.</p>
               <div class="carousel-caption-links">
                 <a href="#" class="btn btn-primary">Track</a>
                 <a href="#" class="btn btn-primary">Contact Us</a>
@@ -118,7 +118,7 @@
           <div class="carousel-caption">
             <div class="container">
               <h5>Start shipping with BC logistics</h5>
-              <p>We are one of the safest logistics operators in the market.</p>
+              <p class="hide-on-xs-sm">We are one of the safest logistics operators in the market.</p>
               <div class="carousel-caption-links">
                 <a href="#" class="btn btn-primary">Track</a>
                 <a href="#" class="btn btn-primary">Contact Us</a>
@@ -259,8 +259,9 @@
       <div class="container">
         <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Work progress</button>
         <h2 class="secondary-title text-center fs-1 fw-medium mb-5">We always follow the best ways</h2>
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+          <div class="col">
             <div class="item placard">
               <img class="placard-image" src="images/home/sending-goods.jpg" alt="bestway image">
               <div class="placard-inner">
@@ -272,7 +273,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col">
             <div class="item placard">
               <img class="placard-image" src="images/home/documentation.jpg" alt="bestway image">
               <div class="placard-inner">
@@ -286,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col">
             <div class="item placard">
               <img class="placard-image" src="images/home/transportation.jpg" alt="bestway image">
               <div class="placard-inner">
@@ -300,7 +301,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col">
             <div class="item placard">
               <img class="placard-image" src="images/home/receiving-goods.jpg" alt="bestway image">
               <div class="placard-inner">
@@ -322,11 +323,8 @@
     <!-- Book you journey -->
     <section class="container-fluid booking-section">
       <div class="row">
-        <div class="col-md-4">
-          <div class="">
-            <img class="placard-image" src="images/home/form-image.jpg" alt="Form image">
-          </div>
-        </div>
+        <div class="col-md-4" style="background-image: url('/images/logo/low-angle-man-using-phone.jpg'); background-size: cover; background-position: center;">
+      </div>
         <div class="col-md-8">
           <div class="d-flex align-items-center booking-form-wrap">
             <form class="booking-form">
@@ -362,14 +360,14 @@
     <!-- Latest News -->
     <section class="placard-section latest-pracard py-5">
       <div class="container">
-        <button type="button" class="btn btn-small btn-tag mb-4 d-block">Lastest News</button>
-        <h2 class="secondary-title fs-1 fw-medium mb-5">Lastest News</h2>
+        <button type="button" class="btn btn-small btn-tag mb-4 d-block">Latest News</button>
+        <h2 class="secondary-title fs-1 fw-medium mb-5">Latest News</h2>
         <a href="#" class="btn-link-icon mb-3 viewmore">View More <i class="bi bi-arrow-right-circle-fill"></i></a>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="item placard">
+        <div class="row gx-3 gx-md-4">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="item placard d-flex flex-column h-100">
               <img class="placard-image" src="images/home/latest-news1.jpg" alt="Latest news">
-              <div class="placard-inner">
+              <div class="placard-inner flex-grow-1">
                 <h4 class="placard-name">New Crowdsourced Delivery</h4>
                 <p class="placard-info">
                   Leveraging the power of the gig economy, crowdsourced delivery platforms are gaining
@@ -381,10 +379,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="item placard">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="item placard d-flex flex-column h-100">
               <img class="placard-image" src="images/home/latest-news2.png" alt="Latest news">
-              <div class="placard-inner">
+              <div class="placard-inner flex-grow-1">
                 <h4 class="placard-name">Smart Lockers</h4>
                 <p class="placard-info">
                   Parcel lockers equipped with advanced technology are becoming increasingly popular in
@@ -395,10 +393,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="item placard">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="item placard d-flex flex-column h-100">
               <img class="placard-image" src="images/home/latest-news3.jpg" alt="Latest news">
-              <div class="placard-inner">
+              <div class="placard-inner flex-grow-1">
                 <h4 class="placard-name">Predictive Analytics</h4>
                 <p class="placard-info">
                   Using data analytics and machine learning, logistics companies optimize delivery routes
@@ -488,23 +486,24 @@
             </ul>
           </div>
           <div class="col-md-3 footer-links-col">
-            <h4>Product</h4>
+            <h4>Services</h4>
             <ul class="nav nav-footer-links flex-column">
-              <li><a href="#" class="nav-link">Listing</a></li>
-              <li><a href="#" class="nav-link">Property</a></li>
-              <li><a href="#" class="nav-link">Contact</a></li>
-              <li><a href="#" class="nav-link">Content</a></li>
-              <li><a href="#" class="nav-link">Integrations</a></li>
+              <li><a href="#" class="nav-link">Ocean Freight</a></li>
+              <li><a href="#" class="nav-link">Air Freight</a></li>
+              <li><a href="#" class="nav-link">Land Freight</a></li>
+              <li><a href="#" class="nav-link">Warehouse Services</a></li>
+              <li><a href="#" class="nav-link">Insurance tab</a></li>
+              <li><a href="#" class="nav-link">Warehousing & Distibution</a></li>
             </ul>
           </div>
           <div class="col-md-2 footer-links-col">
             <h4>Product</h4>
             <ul class="nav nav-footer-links flex-column">
-              <li><a href="#" class="nav-link">Listing</a></li>
-              <li><a href="#" class="nav-link">Property</a></li>
-              <li><a href="#" class="nav-link">Contact</a></li>
-              <li><a href="#" class="nav-link">Content</a></li>
-              <li><a href="#" class="nav-link">Integrations</a></li>
+              <li><a href="#" class="nav-link">About Us</a></li>
+              <li><a href="#" class="nav-link">Vison</a></li>
+              <li><a href="#" class="nav-link">Values</a></li>
+              <li><a href="#" class="nav-link">Services</a></li>
+              <li><a href="#" class="nav-link">Conatct Us</a></li>
             </ul>
           </div>
         </div>
@@ -537,11 +536,11 @@
         </div>
         <div class="d-flex justify-content-center mb-3">
           <ul class="nav nav-footer-links">
-            <li><a href="#" class="nav-link mx-4">Listing</a></li>
-            <li><a href="#" class="nav-link mx-4">Property</a></li>
-            <li><a href="#" class="nav-link mx-4">Contact</a></li>
-            <li><a href="#" class="nav-link mx-4">Content</a></li>
-            <li><a href="#" class="nav-link mx-4">Integrations</a></li>
+            <li><a href="#" class="nav-link mx-4">Privace Policy</a></li>
+            <li><a href="#" class="nav-link mx-4">Terms of Use</a></li>
+            <li><a href="#" class="nav-link mx-4">Sales & Refunds</a></li>
+            <li><a href="#" class="nav-link mx-4">Legal</a></li>
+            <li><a href="#" class="nav-link mx-4">Site Map</a></li>
           </ul>
         </div>
         <div class="d-flex justify-content-center fw-light footer-rights">
@@ -563,11 +562,14 @@
         dots: false,
         responsive: {
           0: {
-            items: 1
+            items: 1 
           },
-          600: {
-            items: 3
+          768: {
+            items: 2 
           },
+          992: {
+            items: 3 
+          }
         }
       });
     });

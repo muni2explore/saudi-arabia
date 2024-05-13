@@ -43,7 +43,7 @@
 <body class="">
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="images/logo/bc-logo.svg" alt="Logo" /></a>
                 <div class="navbar-right">
@@ -82,20 +82,28 @@
     </header>
 
     <main>
-        <div class="simple-banner">
-            <img src="images/services/service-banner.jpg" />
-            <h1 class="page-title">Contact Us</h1>
-        </div>
+        <div id="homeCarouselCaptions" class="carousel slide home-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/contact/banner-1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <div class="container d-flex justify-content-start align-items-center">
+                            <h5>Contact Us</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
 
         <!-- START THE FEATURETTES -->
 
-        <div class="container location col-md-6 bg-white shadow-lg p-3 text-white order-sm-first order-last custom-contact-section mb-4"
+        <div class="container location col-md-12 bg-white shadow-lg p-3 text-white order-sm-first order-last custom-contact-section mb-4"
             style="margin-bottom: 50px;">
             <h2 class="mb-4 text-black text-center">Location</h2>
             <div class="google-map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.011012030731!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE!2sYOUR_PLACE_NAME!5e0!3m2!1sen!2sus!4v1620871860566!5m2!1sen!2sus"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                src="https://maps.google.com/maps?q=21.4978156,39.1876215&z=15&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -182,7 +190,7 @@
                                     <input type="text" class="form-control rounded border border-secondary"
                                         id="interestedIn">
                                 </div>
-                                <div class="col-12 mb-3"> <!-- Set to col-12 for full width on small screens -->
+                                <div class="col-12 mb-3"> 
                                     <label for="formFile" class="form-label">File Upload</label>
                                     <input class="form-control rounded border border-secondary text-center p-2"
                                         type="file" id="formFile">
