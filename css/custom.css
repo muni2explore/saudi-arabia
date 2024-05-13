@@ -180,7 +180,7 @@ header .navbar {
 
 /*------ Home Carousel ------*/
 .home-carousel .carousel-item {
-  height: 40rem;
+  height: 32rem;
 }
 
 .home-carousel .carousel-caption {
@@ -367,8 +367,9 @@ footer .nav-link:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
-  margin: 0 0 0 15px;
+  top: 10px; 
+  left:-10px;
+  padding: 5px; 
 }
 
 .bestways-placard .placard-image {
@@ -376,6 +377,8 @@ footer .nav-link:hover {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .bestways-placard .placard-inner {
@@ -665,3 +668,89 @@ footer .nav-link:hover {
     max-width: 70px;
   }
 }
+
+@media (max-width: 767px) {
+  .bestways-placard .placard-icon {
+    border: 8px solid;
+    background: #32CD32;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; 
+    left:120px;
+    padding: 5px; 
+  }
+
+  header .navbar {
+    background-color: rgb(0 0 0 / 90%);
+    height: auto;
+    min-height: 53px;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    max-width: 50px;
+    left: 20%;
+    top: 6px;
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.55);
+    padding: 3px 6px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bestways-placard .placard-icon {
+    border: 8px solid;
+    background: #32CD32;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; 
+    left:20px;
+    padding: 5px; 
+  }
+
+  .home-carousel .carousel-caption h5 {
+    font-size: 40px;
+    color: #fff;
+    max-width: none;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 430px) {
+  .bestways-placard .placard-icon {
+    border: 8px solid;
+    background: #32CD32;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; 
+    left:20px;
+    padding: 5px; 
+  }
+
+  .hide-on-xs-sm {
+    display: none !important;
+  }
+}
+
+/* @media (min-width: 1024px) and (max-width: 1400px) {
+  .home-carousel .carousel-item {
+    height: 20rem;
+  }
+} */
