@@ -38,46 +38,50 @@
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/services.css" rel="stylesheet">
-</head>
+    <style>
+        .navbar-scrolled {
+        background-color: black !important;
+        }
+    </style>
+    </head>
 
-<body class="">
+    <body class="home-pg">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="images/logo/bc-logo.svg" alt="Logo" /></a>
-                <div class="navbar-right">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about-us.html">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/services.html">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/strategies.html">Strategies</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact-us.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="d-flex navbar-right-social">
-                        <a class="nav-link ms-2" href="#"><i class="bi bi-linkedin"></i></a>
-                        <a class="nav-link ms-2" href="#"><i class="bi bi-twitter-x"></i></a>
-                        <button class="btn btn-secondary ms-3" type="submit">Enquire Now</button>
-                    </div>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo/bc-logo.svg" alt="Logo" /></a>
+            <div class="navbar-right">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/strategies.html">Strategies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-us.html">Contact Us</a>
+                </li>
+                </ul>
             </div>
+            <div class="d-flex navbar-right-social">
+                <a class="nav-link ms-2" href="#"><i class="bi bi-linkedin"></i></a>
+                <a class="nav-link ms-2" href="#"><i class="bi bi-twitter-x"></i></a>
+                <button class="btn btn-secondary ms-3" type="submit">Enquire Now</button>
+            </div>
+            </div>
+        </div>
         </nav>
     </header>
 
@@ -85,28 +89,17 @@
         <div id="homeCarouselCaptions" class="carousel slide home-carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/contact/banner-1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
-                        <div class="container d-flex justify-content-start align-items-center">
-                            <h5>Contact Us</h5>
-                        </div>
+                <img src="images/logo/contact.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <div class="container d-flex justify-content-start align-items-center">
+                        <h5>Contact Us</h5>
                     </div>
                 </div>
-            </div>
-        </div> 
-
-        <!-- START THE FEATURETTES -->
-
-        <div class="container location col-md-12 bg-white shadow-lg p-3 text-white order-sm-first order-last custom-contact-section mb-4"
-            style="margin-bottom: 50px;">
-            <h2 class="mb-4 text-black text-center">Location</h2>
-            <div class="google-map-container">
-                <iframe
-                src="https://maps.google.com/maps?q=21.4978156,39.1876215&z=15&output=embed"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
 
+    <!-- START THE FEATURETTES -->
         <div
             class="container location col-md-12 bg-white shadow-lg p-3 text-white order-sm-first order-last custom-contact-section">
             <div class="container shadow rounded-3">
@@ -209,103 +202,141 @@
                 </div>
             </div>
         </div>
-        <!-- /END THE FEATURETTES -->
 
-        <!-- FOOTER -->
-        <footer class="pb-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-logo-address">
-                        <a href="#" class="d-inline-block mb-4"><img src="images/logo/bc-logo.svg" /></a>
-                        <ul class="nav nav-footer-links flex-column footer-address-col">
-                            <li><i class="bi bi-geo-alt-fill"></i>Al-Baghdadiyah Al-Gharbia District,</br>Madinah Road,
-                                Halah Towers -
-                                Tower 2,</br>First Floor, Office No. 4, Jeddah,</br>Saudi Arabia.</li>
-                            <li><a href="#" class="nav-link"><i
-                                        class="bi bi-envelope-arrow-up"></i>forwarder@bclogistics.com.sa</a>
-                            </li>
-                            <li><a href="#" class="nav-link"><i class="bi bi-telephone-outbound"></i>+966 55996 6072</a>
-                            </li>
-                            <li><a href="#" class="nav-link"><i class="bi bi-camera-video"></i>Meet</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 footer-links-col">
-                        <h4>Product</h4>
-                        <ul class="nav nav-footer-links flex-column">
-                            <li><a href="#" class="nav-link">Listing</a></li>
-                            <li><a href="#" class="nav-link">Property</a></li>
-                            <li><a href="#" class="nav-link">Contact</a></li>
-                            <li><a href="#" class="nav-link">Content</a></li>
-                            <li><a href="#" class="nav-link">Integrations</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 footer-links-col">
-                        <h4>Product</h4>
-                        <ul class="nav nav-footer-links flex-column">
-                            <li><a href="#" class="nav-link">Listing</a></li>
-                            <li><a href="#" class="nav-link">Property</a></li>
-                            <li><a href="#" class="nav-link">Contact</a></li>
-                            <li><a href="#" class="nav-link">Content</a></li>
-                            <li><a href="#" class="nav-link">Integrations</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 footer-links-col">
-                        <h4>Product</h4>
-                        <ul class="nav nav-footer-links flex-column">
-                            <li><a href="#" class="nav-link">Listing</a></li>
-                            <li><a href="#" class="nav-link">Property</a></li>
-                            <li><a href="#" class="nav-link">Contact</a></li>
-                            <li><a href="#" class="nav-link">Content</a></li>
-                            <li><a href="#" class="nav-link">Integrations</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <hr />
-                <div class="row justify-content-between my-5 ms-5 footer-subscribe-social">
-                    <div class="col-md-6 d-flex footer-subscribe">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Subscribe</label>
-                        <div class="input-group ms-5">
-                            <input type="text" class="form-control" placeholder="Enter your email Address"
-                                aria-label="Enter your email Address" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 footer-social">
-                        <ul class="nav d-flex align-items-center justify-content-end mb-0 nav-social">
-                            <li class="mx-2">
-                                <a class="" href="javascript:;"><i class="bi bi-facebook"></i></a>
-                            </li>
-                            <li class="mx-2">
-                                <a class="" href="javascript:;"><i class="bi bi-twitter"></i></a>
-                            </li>
-                            <li class="mx-2">
-                                <a class="" href="javascript:;"><i class="bi bi-instagram"></i></a>
-                            </li>
-                            <li class="ms-2">
-                                <a class="" href="javascript:;"><i class="bi bi-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <ul class="nav nav-footer-links">
-                        <li><a href="#" class="nav-link mx-4">Listing</a></li>
-                        <li><a href="#" class="nav-link mx-4">Property</a></li>
-                        <li><a href="#" class="nav-link mx-4">Contact</a></li>
-                        <li><a href="#" class="nav-link mx-4">Content</a></li>
-                        <li><a href="#" class="nav-link mx-4">Integrations</a></li>
-                    </ul>
-                </div>
-                <div class="d-flex justify-content-center fw-light footer-rights">
-                    <div>&#169; 2021 All Rights Reserved</div>
+        <div class="container location col-md-12 bg-white shadow-lg p-3 text-white order-sm-first order-last custom-contact-section mb-4"
+            style="margin-bottom: 50px;">
+            <h2 class="mb-4 text-black text-center">Location</h2>
+            <div class="google-map-container">
+                <iframe
+                src="https://maps.google.com/maps?q=21.4978156,39.1876215&z=15&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    <!-- /END THE FEATURETTES -->
+
+    <!-- FOOTER -->
+    <footer class="pb-3">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4 footer-logo-address">
+                <a href="#" class="d-inline-block mb-4"><img src="images/logo/bc-logo.svg" /></a>
+                <ul class="nav nav-footer-links flex-column footer-address-col">
+                <li><i class="bi bi-geo-alt-fill"></i>Al-Baghdadiyah Al-Gharbia District,</br>Madinah Road, Halah Towers -
+                    Tower 2,</br>First Floor, Office No. 4, Jeddah,</br>Saudi Arabia.</li>
+                <li><a href="#" class="nav-link"><i class="bi bi-envelope-arrow-up"></i>forwarder@bclogistics.com.sa</a>
+                </li>
+                <li><a href="#" class="nav-link"><i class="bi bi-telephone-outbound"></i>+966 55996 6072</a></li>
+                <li><a href="#" class="nav-link"><i class="bi bi-camera-video"></i>Meet</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-links-col">
+                <h4>Product</h4>
+                <ul class="nav nav-footer-links flex-column">
+                <li><a href="#" class="nav-link">Listing</a></li>
+                <li><a href="#" class="nav-link">Property</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link">Content</a></li>
+                <li><a href="#" class="nav-link">Integrations</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-links-col">
+                <h4>Services</h4>
+                <ul class="nav nav-footer-links flex-column">
+                <li><a href="#" class="nav-link">Ocean Freight</a></li>
+                <li><a href="#" class="nav-link">Air Freight</a></li>
+                <li><a href="#" class="nav-link">Land Freight</a></li>
+                <li><a href="#" class="nav-link">Warehouse Services</a></li>
+                <li><a href="#" class="nav-link">Insurance tab</a></li>
+                <li><a href="#" class="nav-link">Warehousing & Distibution</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 footer-links-col">
+                <h4>Company</h4>
+                <ul class="nav nav-footer-links flex-column">
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Vison</a></li>
+                <li><a href="#" class="nav-link">Values</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Conatct Us</a></li>
+                </ul>
+            </div>
+            </div>
+            <hr />
+            <div class="row justify-content-between my-5 ms-5 footer-subscribe-social">
+            <div class="col-md-6 d-flex footer-subscribe">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Subscribe</label>
+                <div class="input-group ms-5">
+                <input type="text" class="form-control" placeholder="Enter your email Address"
+                    aria-label="Enter your email Address" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
                 </div>
             </div>
+            <div class="col-md-4 footer-social">
+                <ul class="nav d-flex align-items-center justify-content-end mb-0 nav-social">
+                <li class="mx-2">
+                    <a class="" href="javascript:;"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="mx-2">
+                    <a class="" href="javascript:;"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li class="mx-2">
+                    <a class="" href="javascript:;"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li class="ms-2">
+                    <a class="" href="javascript:;"><i class="bi bi-linkedin"></i></a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+            <ul class="nav nav-footer-links">
+                <li><a href="#" class="nav-link mx-4">Privace Policy</a></li>
+                <li><a href="#" class="nav-link mx-4">Terms of Use</a></li>
+                <li><a href="#" class="nav-link mx-4">Sales & Refunds</a></li>
+                <li><a href="#" class="nav-link mx-4">Legal</a></li>
+                <li><a href="#" class="nav-link mx-4">Site Map</a></li>
+            </ul>
+            </div>
+            <div class="d-flex justify-content-center fw-light footer-rights">
+            <div>&#169; 2021 All Rights Reserved</div>
+            </div>
+        </div>
         </footer>
     </main>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            nav: true,
+            navText: ["<i class='bi bi-arrow-left-circle'></i>", "<i class='bi bi-arrow-right-circle'></i>"],
+            dots: false,
+            responsive: {
+            0: {
+                items: 1 
+            },
+            768: {
+                items: 2 
+            },
+            992: {
+                items: 3 
+            }
+            }
+        });
+        });
+    </script>
+    <script>
+        $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
+            $('.navbar').addClass('navbar-scrolled');
+        } else {
+            $('.navbar').removeClass('navbar-scrolled');
+        }
+        });
+    </script>
 
 </body>
 
