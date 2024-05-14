@@ -77,7 +77,7 @@
           <div class="d-flex navbar-right-social">
             <a class="nav-link ms-2" href="#"><i class="bi bi-linkedin"></i></a>
             <a class="nav-link ms-2" href="#"><i class="bi bi-twitter-x"></i></a>
-            <button class="btn btn-secondary ms-3" type="submit">Enquire Now</button>
+            <a href="contact-us.html" class="btn btn-secondary ms-3">Enquire Now</a>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
               <p class="hide-on-xs-sm">We are one of the safest logistics operators in the market.</p>
               <div class="carousel-caption-links">
                 <a href="#" class="btn btn-primary">Track</a>
-                <a href="#" class="btn btn-primary">Contact Us</a>
+                <a href="/contact-us.html" class="btn btn-primary">Contact Us</a>
               </div>
             </div>
           </div>
@@ -152,9 +152,7 @@
           <h2 class="featurette-heading">About BC Logistics</h2>
           <img src="images/home/about-image.jpg" class="d-sm-none" />
           <p class="lead mb-4">
-            The Business Corporation (BC) is managed by dedicated shipping experts,
-            both national and international. We have been serving our clients in
-            Saudi Arabia for 10 years.
+            The BC is managed by dedicated Shipping experts, both national we have been serving our clients in Saudi Arabia for 10 years.
           </p>
           <a href="#" class="btn-link-icon">Read More <i class="bi bi-arrow-right-circle-fill"></i></a>
         </div>
@@ -181,7 +179,7 @@
                 network of agents and correspondents. Our ocean freight services utilize cargo ships for cost-effective
                 transportation of goods across seas and oceans, though with longer transit times and weather-related
                 considerations.</p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#ocean" class="btn btn-green">Read More</a>
             </div>
           </div>
           <div class="item placard">
@@ -196,7 +194,7 @@
                 aspect of the shipping process, from scheduling to execution, with meticulous
                 attention to detail.
               </p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#air" class="btn btn-green">Read More</a>
             </div>
           </div>
           <div class="item placard">
@@ -210,7 +208,7 @@
                 offering seamless door-to-door delivery solutions while adeptly navigating
                 road congestion, regulatory standards, and weather conditions.
               </p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#land" class="btn btn-green">Read More</a>
             </div>
           </div>
           <div class="item placard">
@@ -221,7 +219,7 @@
               <p class="placard-info">
                 We handle clearing documents efficiently and offer swift, service at airports and seaports. With specialized care for sensitive shipments, we process all necessary documentation promptly. Additionally, we cater to cargo of any size, provide storage, and offer warehouse facilities to meet all your logistics needs with expertise and dedication.
               </p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#custom-clearance" class="btn btn-green">Read More</a>
             </div>
           </div>
           <div class="item placard">
@@ -237,7 +235,7 @@
                 insurance coverage against all risks, providing you with peace of mind throughout 
                 the logistics process.
               </p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#warehouse" class="btn btn-green">Read More</a>
             </div>
           </div>
           <div class="item placard">
@@ -247,7 +245,7 @@
               <h4 class="placard-name">Documentation</h4>
               <p class="placard-info">
                 Our comprehensive services encompass handling essential documentation such as the Shipper's Letter of Instruction and Customs Value Declaration. Additionally, we offer Freight Insurance and manage the preparation of Saber certificates. With expertise in processing Bill of Lading and Cargo Insurance, we ensure smooth and secure shipping transactions tailored to your needs.</p>
-              <a href="#" class="btn btn-green">Read More</a>
+              <a href="services.html#docs" class="btn btn-green">Read More</a>
             </div>
           </div>
         </div>
@@ -329,27 +327,36 @@
           <div class="d-flex align-items-center booking-form-wrap">
             <form class="booking-form">
               <h3 class="booking-title">Embark on Effortless Logistics:</br>Book Your Cargo's Journey Today!</h3>
-              <div class="row">
-                <div class="col-md-6 mb-5">
-                  <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+                <div class="row g-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control rounded border border-secondary"
+                            id="firstName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control rounded border border-secondary"
+                            id="lastName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control rounded border border-secondary" id="email"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control rounded border border-secondary" id="phone"
+                            required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control rounded border border-secondary" id="message"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-5">
-                  <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
-                </div>
-                <div class="col-md-6 mb-5">
-                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="col-md-6 mb-5">
-                  <label for="exampleFormControlInput1" class="form-label">Phone</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone">
-                </div>
-              </div>
-              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-              <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3"></textarea>
-              <button type="submit" class="btn btn-secondary">Submit</button>
             </form>
           </div>
         </div>
@@ -448,7 +455,9 @@
             <h6 class="text-primary mb-3">Saudi Arabia(Head Office)</h6>
             <address>
               <h6>Saudi Arabia(Head Office)</h6>
-              <p>Surooh Business Center, First Floor, </br>Office no - 03Heal Street,Jeddah </br>Saudi Arabia.</p>
+              <p>Jeddah, Al-Baghdadiyah Al-Gharbia District -  
+              <p>Madinah Road Halah Towers 
+              <p>Tower 2 - First Floor Office No. 4 </br>Saudi Arabia.</p>
             </address>
           </div>
           <div class="col-md-8">
@@ -463,91 +472,91 @@
     <!-- FOOTER -->
     <footer class="pb-3">
       <div class="container">
-        <div class="row">
+          <div class="row">
           <div class="col-md-4 footer-logo-address">
-            <a href="#" class="d-inline-block mb-4"><img src="images/logo/bc-logo.svg" /></a>
-            <ul class="nav nav-footer-links flex-column footer-address-col">
+              <a href="#" class="d-inline-block mb-4"><img src="images/logo/bc-logo.svg" /></a>
+              <ul class="nav nav-footer-links flex-column footer-address-col">
               <li><i class="bi bi-geo-alt-fill"></i>Al-Baghdadiyah Al-Gharbia District,</br>Madinah Road, Halah Towers -
-                Tower 2,</br>First Floor, Office No. 4, Jeddah,</br>Saudi Arabia.</li>
+                  Tower 2,</br>First Floor, Office No. 4, Jeddah,</br>Saudi Arabia.</li>
               <li><a href="#" class="nav-link"><i class="bi bi-envelope-arrow-up"></i>forwarder@bclogistics.com.sa</a>
               </li>
               <li><a href="#" class="nav-link"><i class="bi bi-telephone-outbound"></i>+966 55996 6072</a></li>
               <li><a href="#" class="nav-link"><i class="bi bi-camera-video"></i>Meet</a></li>
-            </ul>
+              </ul>
           </div>
           <div class="col-md-3 footer-links-col">
-            <h4>Product</h4>
-            <ul class="nav nav-footer-links flex-column">
+              <h4>Product</h4>
+              <ul class="nav nav-footer-links flex-column">
               <li><a href="#" class="nav-link">Listing</a></li>
               <li><a href="#" class="nav-link">Property</a></li>
               <li><a href="#" class="nav-link">Contact</a></li>
               <li><a href="#" class="nav-link">Content</a></li>
               <li><a href="#" class="nav-link">Integrations</a></li>
-            </ul>
+              </ul>
           </div>
           <div class="col-md-3 footer-links-col">
-            <h4>Services</h4>
-            <ul class="nav nav-footer-links flex-column">
+              <h4>Services</h4>
+              <ul class="nav nav-footer-links flex-column">
               <li><a href="#" class="nav-link">Ocean Freight</a></li>
               <li><a href="#" class="nav-link">Air Freight</a></li>
               <li><a href="#" class="nav-link">Land Freight</a></li>
               <li><a href="#" class="nav-link">Warehouse Services</a></li>
               <li><a href="#" class="nav-link">Insurance tab</a></li>
               <li><a href="#" class="nav-link">Warehousing & Distibution</a></li>
-            </ul>
+              </ul>
           </div>
           <div class="col-md-2 footer-links-col">
-            <h4>Product</h4>
-            <ul class="nav nav-footer-links flex-column">
+              <h4>Company</h4>
+              <ul class="nav nav-footer-links flex-column">
               <li><a href="#" class="nav-link">About Us</a></li>
               <li><a href="#" class="nav-link">Vison</a></li>
               <li><a href="#" class="nav-link">Values</a></li>
               <li><a href="#" class="nav-link">Services</a></li>
               <li><a href="#" class="nav-link">Conatct Us</a></li>
-            </ul>
+              </ul>
           </div>
-        </div>
-        <hr />
-        <div class="row justify-content-between my-5 ms-5 footer-subscribe-social">
+          </div>
+          <hr />
+          <div class="row justify-content-between my-5 ms-5 footer-subscribe-social">
           <div class="col-md-6 d-flex footer-subscribe">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Subscribe</label>
-            <div class="input-group ms-5">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Subscribe</label>
+              <div class="input-group ms-5">
               <input type="text" class="form-control" placeholder="Enter your email Address"
-                aria-label="Enter your email Address" aria-describedby="button-addon2">
+                  aria-label="Enter your email Address" aria-describedby="button-addon2">
               <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
-            </div>
+              </div>
           </div>
           <div class="col-md-4 footer-social">
-            <ul class="nav d-flex align-items-center justify-content-end mb-0 nav-social">
+              <ul class="nav d-flex align-items-center justify-content-end mb-0 nav-social">
               <li class="mx-2">
-                <a class="" href="javascript:;"><i class="bi bi-facebook"></i></a>
+                  <a class="" href="javascript:;"><i class="bi bi-facebook"></i></a>
               </li>
               <li class="mx-2">
-                <a class="" href="javascript:;"><i class="bi bi-twitter"></i></a>
+                  <a class="" href="javascript:;"><i class="bi bi-twitter"></i></a>
               </li>
               <li class="mx-2">
-                <a class="" href="javascript:;"><i class="bi bi-instagram"></i></a>
+                  <a class="" href="javascript:;"><i class="bi bi-instagram"></i></a>
               </li>
               <li class="ms-2">
-                <a class="" href="javascript:;"><i class="bi bi-linkedin"></i></a>
+                  <a class="" href="javascript:;"><i class="bi bi-linkedin"></i></a>
               </li>
-            </ul>
+              </ul>
           </div>
-        </div>
-        <div class="d-flex justify-content-center mb-3">
+          </div>
+          <div class="d-flex justify-content-center mb-3">
           <ul class="nav nav-footer-links">
-            <li><a href="#" class="nav-link mx-4">Privace Policy</a></li>
-            <li><a href="#" class="nav-link mx-4">Terms of Use</a></li>
-            <li><a href="#" class="nav-link mx-4">Sales & Refunds</a></li>
-            <li><a href="#" class="nav-link mx-4">Legal</a></li>
-            <li><a href="#" class="nav-link mx-4">Site Map</a></li>
+              <li><a href="#" class="nav-link mx-4">Privace Policy</a></li>
+              <li><a href="#" class="nav-link mx-4">Terms of Use</a></li>
+              <li><a href="#" class="nav-link mx-4">Sales & Refunds</a></li>
+              <li><a href="#" class="nav-link mx-4">Legal</a></li>
+              <li><a href="#" class="nav-link mx-4">Site Map</a></li>
           </ul>
-        </div>
-        <div class="d-flex justify-content-center fw-light footer-rights">
+          </div>
+          <div class="d-flex justify-content-center fw-light footer-rights">
           <div>&#169; 2021 All Rights Reserved</div>
-        </div>
+          </div>
       </div>
-    </footer>
+      </footer>
   </main>
 
 
