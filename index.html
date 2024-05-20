@@ -70,12 +70,7 @@
 
     .hidden-content {
       display: none; 
-      background-color: #f8f9fa; 
-      padding: 15px; 
-      border: 1px solid #ddd;
-      border-radius: 8px; 
       margin-top: 15px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: max-height 0.3s ease-out, opacity 0.3s ease-out; 
       opacity: 0;
       max-height: 0;
@@ -97,6 +92,14 @@
     .read-more:hover {
       text-decoration: underline; 
     }
+
+    .hidden-content {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
   </style>
 </head>
 
@@ -230,45 +233,35 @@
       <div class="container">
         <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Our services</button>
         <h2 class="secondary-title text-center fs-1 fw-medium mb-5">Wide Variety Of Logistics Services</h2>
-        <div class="owl-carousel">
-          <div class="item placard">
-            <img class="placard-image" src="images/home/ocean-fright.png" alt="service image">
-            <div class="placard-inner">
-              <label class="placard-icon"><img src="images/home/ship.svg" alt="service icon" /></label>
-              <h4 class="placard-name">Ocean Freight Forwarding</h4>
-              <p class="placard-info">We operate with a modern and dynamic structure, supported by a worldwide network of agents and correspondents. Our ocean freight services utilize cargo ships for cost-effective transportation of goods across seas and oceans, though with longer transit times and weather-related considerations.</p>
-              <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
-              <div class="hidden-content">
-                <p>
-                  We offer full of container loading service door-to-door or port-to-port through a single point offer
-                  contact.We provide stremlined freight forwarding to book,arrange for pickup, and delivery and manage
-                  shipping documents for virtually any orgin or destination.we handle various types of cargos, including 
-                  dangerous goods, small quantity cargo(LCL), containers.
-                </p>
+          <div class="owl-carousel">
+            <div class="item placard">
+              <img class="placard-image" src="images/home/ocean-fright.png" alt="service image">
+              <div class="placard-inner">
+                  <label class="placard-icon"><img src="images/home/ship.svg" alt="service icon" /></label>
+                  <h4 class="placard-name">Ocean Freight Forwarding</h4>
+                  <p class="placard-info">We operate with a modern and dynamic structure, supported by a worldwide network of agents and correspondents. Our ocean freight services utilize cargo ships for cost-effective transportation of goods across seas and oceans, though with longer transit times and weather-related considerations.</p>
+                  <div class="hidden-content">
+                      <p class="placard-info">We offer full container loading service door-to-door or port-to-port through a single point of contact. We provide streamlined freight forwarding to book, arrange for pickup, and delivery, and manage shipping documents for virtually any origin or destination. We handle various types of cargo, including dangerous goods, small quantity cargo (LCL), and containers.</p>
+                  </div>
+                  <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
               </div>
-            </div>
           </div>
           <div class="item placard">
             <img class="placard-image" src="images/home/aero.png" alt="service image">
             <div class="placard-inner">
-              <label class="placard-icon"><img src="images/home/aeroplane.svg" alt="service icon" /></label>
-              <h4 class="placard-name">Air Frieght Forwarding</h4>
-              <p class="placard-info">
-                Precise, timed arrivals and flexible coordination are our hallmark at BC.
-                We pride ourselves on ensuring that your cargo reaches its destination
-                promptly and seamlessly. Our team works diligently to orchestrate every
-                aspect of the shipping process, from scheduling to execution, with meticulous
-                attention to detail.
-              </p>
-              <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
-              <div class="hidden-content">
-                <p>
-                  We offer a range of air cargo solutions to help you find the optimal balance between speed and cost.
-                </p>
-                <p>Benefits from a seamless network with the highest safety and quality standards to fly your cargos to any location in the world.</p>
-              </div>
+                <label class="placard-icon"><img src="images/home/aeroplane.svg" alt="service icon" /></label>
+                <h4 class="placard-name">Air Frieght Forwarding</h4>
+                <p class="placard-info">Precise, timed arrivals and flexible coordination are our hallmark at BC.
+                  We pride ourselves on ensuring that your cargo reaches its destination
+                  promptly and seamlessly. Our team works diligently to orchestrate every
+                  aspect of the shipping process, from scheduling to execution, with meticulous
+                  attention to detail.</p>
+                <div class="hidden-content">
+                    <p class="placard-info">We offer a range of air cargo solutions to help you find the optimal balance between speed and cost.Benefits from a seamless network with the highest safety and quality standards to fly your cargos to any location in the world.</p>
+                </div>
+                <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
             </div>
-          </div>
+        </div>
           <div class="item placard">
             <img class="placard-image" src="images/home/vehicle.png" alt="service image">
             <div class="placard-inner">
@@ -708,22 +701,20 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const readMoreButtons = document.querySelectorAll('.read-more');
-
-    readMoreButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const hiddenContent = this.nextElementSibling;
-
-        if (hiddenContent.classList.contains('show')) {
-          hiddenContent.classList.remove('show');
-          this.textContent = 'Read More';
-        } else {
-          hiddenContent.classList.add('show');
-          this.textContent = 'Read Less';
-        }
-      });
+        const readMoreButtons = document.querySelectorAll('.read-more')
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const hiddenContent = this.previousElementSibling
+                if (hiddenContent.classList.contains('show')) {
+                    hiddenContent.classList.remove('show');
+                    this.textContent = 'Read More';
+                } else {
+                    hiddenContent.classList.add('show');
+                    this.textContent = 'Read Less';
+                }
+            });
+        });
     });
-  });
   </script>
 
 </body>
