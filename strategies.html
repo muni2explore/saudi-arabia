@@ -40,8 +40,170 @@
     <link href="css/services.css" rel="stylesheet">
     <style>
         .navbar-scrolled {
-        background-color: black !important;
+            background-color: black !important;
         }
+
+        .green-bg {
+            background-color: green;
+        }
+
+        .wrap {
+  color: #222;
+  font-size: 24px;
+}
+
+.clip-svg {
+  width: 0;
+  height: 0;
+}
+
+.clip-caption {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.clip-each {
+  display: block;
+  position: relative;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-clip-path: url("#hexagon-clip");
+  clip-path: url("#hexagon-clip");
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin: 0 auto;
+}
+
+a.clip-each:hover {
+  background: #9E566E;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+.clip-solid {
+  width: 300px;
+  height: 300px;
+  background-image: url("https://karenmenezes.com/static/img/demos/shapes-polygon/c.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ad6996;
+  background-blend-mode: hard-light;
+  -webkit-transition: all 2.5s linear;
+  transition: all 2.5s linear;
+}
+
+.clip-solid:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 3%, 17% 100%, 100% 100%);
+  clip-path: polygon(100% 3%, 17% 100%, 100% 100%);
+  -webkit-clip-path: url("#triangle-clip");
+  clip-path: url("#triangle-clip");
+  background: #9E566E;
+  z-index: 1;
+  width: 100%;
+  height: 155px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  pointer-events: none;
+}
+
+.clip-solid:hover:after {
+  height: 0;
+  -webkit-transition: all 0.45s ease-in;
+  transition: all 0.45s ease-in;
+}
+
+.clip-solid:hover .social-share-block {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.social-share-block {
+  position: absolute;
+  bottom: 20px;
+  right: 75px;
+  color: #fff;
+  font-size: 70%;
+  z-index: 2;
+}
+
+.social-each {
+  font-size: 80%;
+}
+
+.clip-gradient {
+  background: #222;
+  width: 160px;
+  height: 160px;
+}
+
+.clip-gradient .clip-caption {
+  color: #fff;
+}
+
+.clip-border {
+  background: -webkit-linear-gradient(300deg, #aebcbf 0%, #6e7774 50%, #333 61%, #333 100%);  
+  background: linear-gradient(150deg, #aebcbf 0%,#6e7774 50%,#333 61%,#333 100%);
+  width: 160px;
+  height: 160px;
+  margin-top: 7px;
+  color: #222;
+}
+
+.clip-border::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  margin: 0 auto;
+  background: url("https://karenmenezes.com/static/img/demos/shapes-polygon/bg-cubes.png");
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-clip-path: url("#hexagon-clip");
+  clip-path: url("#hexagon-clip");
+  z-index: -1;
+}
+
+.clip-tagline {
+  display: block;
+  color: #758C9B;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 550px) {
+  .wrap {
+    display: table;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .clip-block {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .clip-border {
+    margin-top: 20px;
+  }
+}
     </style>
     </head>
 
@@ -298,6 +460,96 @@
             </div>
         </div>
     </div>
+
+    <section class="placard-section services-placard py-5">
+        <div class="container">
+            <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Advantage</button>
+            <h2 class="secondary-title text-center fs-1 fw-medium mb-5">Provide Professional and effecient full logistics supply chain services for import and export customers</h2>
+            <div class="owl-carousel">
+                <div class="item placard">
+                <img class="placard-image" src="images/star/star1.avif" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/star/answer.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">Answer All the Questions</h4>
+                    <p class="placard-info">
+                        Explore our comprehensive logistics solutions for all your queries. 
+                        From efficient shipping and reliable international deliveries to transparent 
+                        pricing, we ensure hassle-free logistics. Trust us for customs clearance, freight 
+                        forwarding, and secure shipments. Experience seamless logistics with us.
+                    </p>
+                </div>
+                </div>
+                <div class="item placard">
+                <img class="placard-image" src="images/star/custom clearence.jpg" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/star/u_comment-lines.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">About Custom Clearance</h4>
+                    <p class="placard-info">
+                        Streamlining customs clearance is essential for seamless import and export processes. 
+                        Our expert team ensures smooth clearance procedures, minimizing delays and avoiding 
+                        penalties. From documentation to compliance, we handle it all efficiently.
+                        Trust us for reliable customs clearance .
+                    </p>
+                </div>
+                </div>
+                <div class="item placard">
+                <img class="placard-image" src="images/star/star4.avif" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/star/u_file-check-alt.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">Regarding Taxes</h4>
+                    <p class="placard-info">
+                        Navigating tax regulations is vital for financial stability. Our tax services 
+                        offer expert guidance and meticulous attention to detail. From filing returns 
+                        to strategic planning, we tailor our solutions to your specific needs. Partner 
+                        with us for reliable tax management and peace of mind.
+                    </p>
+                </div>
+                </div>
+                <div class="item placard">
+                <img class="placard-image" src="images/star/about evaluation.jpg" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/star/u_file-edit-alt.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">About Evaluation</h4>
+                    <p class="placard-info">
+                        We value every comment you make, and your satisfaction is our priority. 
+                        If you're satisfied with our services and would consider leaving a positive 
+                        review, we would greatly appreciate it. However, if you have any dissatisfaction,
+                        please communicate with us first. We are committed to resolving any reasonable 
+                        issues promptly and ensuring your complete satisfaction. 
+                    </p>
+                </div>
+                </div>
+                <div class="item placard">
+                <img class="placard-image" src="images/star/star3.jpg" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/star/u_comment-lines.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">Sign For Receipt</h4>
+                    <p class="placard-info">
+                        Efficiently managing your logistics is crucial for smooth operations. 
+                        Our platform offers comprehensive solutions tailored to your needs. 
+                        From tracking shipments to optimizing routes, we've got you covered. 
+                        Additionally, we provide real-time analytics to enhance decision-making and 
+                        reduce costs. Plus, our dedicated customer support ensures you're always assisted.
+                    </p>
+                </div>
+                </div>
+                <div class="item placard">
+                <img class="placard-image" src="images/star/star2.jpg" alt="service image">
+                <div class="placard-inner">
+                    <label class="placard-icon"><img src="images/bclogistics/home/document.svg" alt="service icon" /></label>
+                    <h4 class="placard-name">About Inspection</h4>
+                    <p class="placard-info">
+                        Ensuring quality through thorough inspections is essential for your business. 
+                        Our inspection services are designed to guarantee compliance and reliability. 
+                        From initial checks to detailed reports, we provide comprehensive solutions. 
+                        Additionally, our experienced inspectors utilize the latest technology to ensure 
+                        accuracy and efficiency.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- /END THE FEATURETTES -->
 
     <!-- FOOTER -->
@@ -348,32 +600,20 @@
             </div>
             </div>
             <hr />
-            <div class="row justify-content-between my-5 ms-5 footer-subscribe-social">
-            <div class="col-md-6 d-flex footer-subscribe">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Subscribe</label>
-                <div class="input-group ms-5">
-                <input type="text" class="form-control" placeholder="Enter your email Address"
-                    aria-label="Enter your email Address" aria-describedby="button-addon2">
-                <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
-                </div>
-            </div>
-            <div class="col-md-4 footer-social">
-                <ul class="nav d-flex align-items-center justify-content-end mb-0 nav-social">
-                <li class="mx-2">
-                    <a class="" href="javascript:;"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="mx-2">
-                    <a class="" href="javascript:;"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li class="mx-2">
-                    <a class="" href="javascript:;"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="ms-2">
-                    <a class="" href="javascript:;"><i class="bi bi-linkedin"></i></a>
-                </li>
-                </ul>
-            </div>
-            </div>
+            <div class="row justify-content-center my-1 footer-subscribe-social">
+              <ul class="nav d-flex align-items-center justify-content-center mb-0 nav-social text-center">
+                  <li class="mx-2">
+                      <a class="nav-link ms-2" href="https://www.linkedin.com/company/barq-al-qarat-company-for-logistics-service-bc-logistics/" target="_blank">
+                          <i class="bi bi-linkedin" id="linked-icon" style="color: white;font-size: 24px;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='white';"></i>
+                      </a>
+                  </li>
+                  <li class="mx-2">
+                      <a class="nav-link ms-2" href="https://www.instagram.com/logisticsbc?igsh=MTg3eTQyNjVvZTFscQ==" target="_blank">
+                          <i class="bi bi-instagram" id="instagram-icon" style="color: white; font-size: 24px;" onmouseover="this.style.color='red';" onmouseout="this.style.color='white';"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
             <div class="d-flex justify-content-center mb-3">
             <ul class="nav nav-footer-links">
                 <li><a href="#" class="nav-link mx-4">Privace Policy</a></li>
