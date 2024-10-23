@@ -30,6 +30,9 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-icons.min.css" rel="stylesheet">
 
+  <!-- notie -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notie/dist/notie.min.css">
+
   <!-- Owl Carosel CSS -->
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -113,6 +116,8 @@
         }
       }
   </style>
+  <!-- Notie JS -->
+  <script src="https://cdn.jsdelivr.net/npm/notie"></script>
 </head>
 
 <body class="home-pg">
@@ -228,7 +233,7 @@
           <h2 class="placard-name">We give our customers the decisive competitive advantage.</h2>
           <img src="images/home/about-image.jpg" class="d-sm-none" />
           <p class="lead mb-4">
-            The BC is managed by dedicated Shipping experts, both national we have been serving our clients in Saudi Arabia for 10 years.
+            The BC is managed by dedicated Shipping experts, both National and International we have been serving our clients in Saudi Arabia for 10 years.
           </p>
           <a href="#" class="btn-link-icon">Read More <i class="bi bi-arrow-right-circle-fill"></i></a>
         </div>
@@ -259,7 +264,7 @@
         <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Our services</button>
         <h2 class="secondary-title text-center fs-1 fw-medium mb-5">Wide Variety Of Logistics Services</h2>
           <div class="owl-carousel">
-            <div class="item placard">
+            <div class="item placard" id="ocean">
               <img class="placard-image" src="images/home/ocean-fright.png" alt="service image">
               <div class="placard-inner">
                   <label class="placard-icon"><img src="images/home/ship.svg" alt="service icon" /></label>
@@ -271,7 +276,7 @@
                   <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
               </div>
           </div>
-          <div class="item placard">
+          <div class="item placard" id="air">
             <img class="placard-image" src="images/home/aero.png" alt="service image">
             <div class="placard-inner">
                 <label class="placard-icon"><img src="images/home/aeroplane.svg" alt="service icon" /></label>
@@ -287,7 +292,7 @@
                 <a href="javascript:void(0);" class="btn btn-green read-more">Read More</a>
             </div>
         </div>
-          <div class="item placard">
+          <div class="item placard" id="land-freight">
             <img class="placard-image" src="images/home/vehicle.png" alt="service image">
             <div class="placard-inner">
               <label class="placard-icon"><img src="images/home/vehicle.svg" alt="service icon" /></label>
@@ -301,7 +306,7 @@
               <a href="services.html#land" class="btn btn-green">Read More</a>
             </div>
           </div>
-          <div class="item placard">
+          <div class="item placard" id="customs">
             <img class="placard-image" src="images/services/custom-clearance.jpg" alt="service image">
             <div class="placard-inner">
               <label class="placard-icon"><img src="images/bclogistics/home/custom-clearance.svg" alt="service icon" /></label>
@@ -312,7 +317,7 @@
               <a href="services.html#custom-clearance" class="btn btn-green">Read More</a>
             </div>
           </div>
-          <div class="item placard">
+          <div class="item placard" id="warehouse">
             <img class="placard-image" src="images/services/warehouse.jpg" alt="service image">
             <div class="placard-inner">
               <label class="placard-icon"><img src="images/bclogistics/home/warehouse.svg" alt="service icon" /></label>
@@ -328,7 +333,7 @@
               <a href="services.html#warehouse" class="btn btn-green">Read More</a>
             </div>
           </div>
-          <div class="item placard">
+          <div class="item placard" id="documentation">
             <img class="placard-image" src="images/services/documentation.jpg" alt="service image">
             <div class="placard-inner">
               <label class="placard-icon"><img src="images/bclogistics/home/document.svg" alt="service icon" /></label>
@@ -348,111 +353,102 @@
         <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Work progress</button>
         <h2 class="secondary-title text-center fs-1 fw-medium mb-5">We always follow the best ways</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-
+    
           <div class="col">
-            <div class="item placard">
+            <div class="item placard h-100 p-3">
               <img class="placard-image" src="images/home/sending-goods.jpg" alt="bestway image">
-              <div class="placard-inner">
+              <div class="placard-inner p-2">
                 <label class="placard-icon">01</label>
                 <h4 class="placard-name">Sending Goods</h4>
-                <p class="placard-info">We utilize quality materials to protect goods, ensure accurate recipient
-                  details, and prioritize factors like speed, cost, and reliability to guarantee efficient and secure
-                  delivery.</p>
+                <p class="placard-info">
+                  We utilize quality materials to protect goods, ensure accurate recipient details, and prioritize factors like speed, cost, and reliability to guarantee efficient and secure delivery.
+                </p>
               </div>
             </div>
           </div>
+    
           <div class="col">
-            <div class="item placard">
+            <div class="item placard h-100 p-3">
               <img class="placard-image" src="images/home/documentation.jpg" alt="bestway image">
-              <div class="placard-inner">
+              <div class="placard-inner p-2">
                 <label class="placard-icon">02</label>
                 <h4 class="placard-name">Documentation</h4>
                 <p class="placard-info">
-                  We meticulously document goods and their values, provide receipts, establish
-                  shipping terms, and ensure regulatory compliance and transparency by including
-                  a certificate of origin in our preparation process.
+                  We meticulously document goods and their values, provide receipts, establish shipping terms, and ensure regulatory compliance and transparency by including a certificate of origin in our preparation process.
                 </p>
               </div>
             </div>
           </div>
+    
           <div class="col">
-            <div class="item placard">
+            <div class="item placard h-100 p-3">
               <img class="placard-image" src="images/home/transportation.jpg" alt="bestway image">
-              <div class="placard-inner">
+              <div class="placard-inner p-2">
                 <label class="placard-icon">03</label>
                 <h4 class="placard-name">Transportation</h4>
                 <p class="placard-info">
-                  Flexible for short to medium distances, our services are also cost-effective for
-                  transporting large volumes over long distances, ensuring optimal solutions for
-                  varied logistical needs.
+                  Flexible for short to medium distances, our services are also cost-effective for transporting large volumes over long distances, ensuring optimal solutions for varied logistical needs.
                 </p>
               </div>
             </div>
           </div>
+    
           <div class="col">
-            <div class="item placard">
+            <div class="item placard h-100 p-3">
               <img class="placard-image" src="images/home/receiving-goods.jpg" alt="bestway image">
-              <div class="placard-inner">
+              <div class="placard-inner p-2">
                 <label class="placard-icon">04</label>
                 <h4 class="placard-name">Receiving Goods</h4>
                 <p class="placard-info">
-                  Trucks are a versatile option for transporting goods over short to medium distances,
-                  offering flexibility, reliability, and the capability to navigate various road
-                  conditions, making them an ideal choice for diverse logistical needs.
+                  Trucks are a versatile option for transporting goods over short to medium distances, offering flexibility, reliability, and the capability to navigate various road conditions, making them an ideal choice for diverse logistical needs.
                 </p>
               </div>
             </div>
           </div>
+    
         </div>
       </div>
     </section>
-
+    
 
     <!-- Book you journey -->
     <section class="container-fluid booking-section">
       <div class="row">
-        <div class="col-md-4" style="background-image: url('/images/logo/low-angle-man-using-phone.jpg'); background-size: cover; background-position: center;">
-      </div>
+        <div class="col-md-4" style="background-image: url('/images/logo/low-angle-man-using-phone.jpg'); background-size: cover; background-position: center;"></div>
         <div class="col-md-8">
           <div class="d-flex align-items-center booking-form-wrap">
-            <form class="booking-form">
-              <h3 class="booking-title">Embark on Effortless Logistics:</br>Book Your Cargo's Journey Today!</h3>
-                <div class="row g-3">
-                    <div class="col-md-6 mb-3">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control rounded border border-secondary"
-                            id="firstName" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control rounded border border-secondary"
-                            id="lastName" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control rounded border border-secondary" id="email"
-                            required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="tel" class="form-control rounded border border-secondary" id="phone"
-                            required>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control rounded border border-secondary" id="message"
-                            rows="3"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-secondary">Submit</button>
-                    </div>
+            <form id="bookingForm" class="booking-form">
+              <h3 class="booking-title">Embark on Effortless Logistics:<br>Book Your Cargo's Journey Today!</h3>
+              <div class="row g-3">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control rounded border border-secondary" id="firstName" required>
                 </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control rounded border border-secondary" id="lastName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control rounded border border-secondary" id="email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input type="tel" class="form-control rounded border border-secondary" id="phone" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control rounded border border-secondary" id="message" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Latest News -->
     <section class="placard-section latest-pracard py-5">
@@ -508,13 +504,37 @@
       </div>
     </section>
     
-
-
     <!-- Our Membership -->
-    <section class="speedyui speedyui-partner bg-light py-5">
-      <div class="container">   
-        <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Membership</button>
+    <section class="py-5 bg-light py-5">
+      <div class="container text-center">
+        <button type="button" class="btn btn-sm btn-tag mb-4 d-block mx-auto">Membership</button>
         <h2 class="secondary-title text-center fs-1 fw-medium mb-5">Our Membership</h2>
+        <div class="swiper-content position-relative mt-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mb-2">
+              <div class="swiper-slide bg-white p-1 rounded-pill bg-light text-center">
+                <img src="images/star/logo1.png" alt="Partner Logo 1" class="img-fluid" style="max-width: 250px; max-height: 100px; object-fit: contain;">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mb-2">
+              <div class="swiper-slide bg-white p-1 rounded-pill bg-light text-center">
+                <img src="https://uvshipping.com/wp-content/uploads/2023/09/js.png" alt="Partner Logo 2" class="img-fluid" style="max-width: 250px; max-height: 100px; object-fit: contain;">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mb-2">
+              <div class="swiper-slide bg-white p-1 rounded-pill bg-light text-center">
+                <img src="/images/home/fiata.png" alt="Partner Logo 3" class="img-fluid" style="max-width: 250px; max-height: 100px; object-fit: contain;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speedyui speedyui-partner py-5">
+      <div class="container">   
+        <button type="button" class="btn btn-small btn-tag mb-4 d-block mx-auto">Clients</button>
+        <h2 class="secondary-title text-center fs-1 fw-medium mb-5">Our Clients</h2>
           <div class="swiper-content position-relative mt-5 px-5">
               <div class="swiper partnerswiper">
                   <div class="swiper-wrapper">    
@@ -561,7 +581,6 @@
           </div><!--.content-->
       </div><!--.container-->
   </section>
-
 
     <!-- Our Location -->
     <section class="our-location py-5">
@@ -615,22 +634,21 @@
           <div class="col-md-3 footer-links-col">
               <h4>Services</h4>
               <ul class="nav nav-footer-links flex-column">
-              <li><a href="#" class="nav-link">Ocean Freight</a></li>
-              <li><a href="#" class="nav-link">Air Freight</a></li>
-              <li><a href="#" class="nav-link">Land Freight</a></li>
-              <li><a href="#" class="nav-link">Warehouse Services</a></li>
-              <li><a href="#" class="nav-link">Insurance tab</a></li>
-              <li><a href="#" class="nav-link">Warehousing & Distibution</a></li>
+              <li><a href="services.html#ocean" class="nav-link">Ocean Freight</a></li>
+              <li><a href="services.html#air" class="nav-link">Air Freight</a></li>
+              <li><a href="services.html#land" class="nav-link">Land Freight</a></li>
+              <li><a href="services.html#custom-clearance" class="nav-link">Customs Clearance</a></li>
+              <li><a href="services.html#warehouse" class="nav-link">Warehouse Service</a></li>
+              <li><a href="services.html#docs" class="nav-link">Documentation</a></li>
               </ul>
           </div>
           <div class="col-md-2 footer-links-col">
               <h4>Company</h4>
               <ul class="nav nav-footer-links flex-column">
-              <li><a href="#" class="nav-link">About Us</a></li>
-              <li><a href="#" class="nav-link">Vison</a></li>
-              <li><a href="#" class="nav-link">Values</a></li>
-              <li><a href="#" class="nav-link">Services</a></li>
-              <li><a href="#" class="nav-link">Conatct Us</a></li>
+              <li><a href="/about-us.html" class="nav-link">About Us</a></li>
+              <li><a href="/services.html" class="nav-link">Services</a></li>
+              <li><a href="/strategies.html" class="nav-link">Strategies</a></li>
+              <li><a href="/contact-us.html" class="nav-link">Conatct Us</a></li>
               </ul>
           </div>
           </div>
@@ -745,6 +763,44 @@
         });
     });
   </script>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+      };
+
+      fetch('/form-submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        notie.alert({
+          type: 'success',
+          text: 'Form submitted successfully!',
+          time: 3
+        });
+        document.getElementById('bookingForm').reset();
+      })
+      .catch(error => {
+        notie.alert({
+          type: 'error',
+          text: 'There was an error submitting the form. Please try again.',
+          time: 3
+        });
+      });
+    });
+  </script>
+
 
 <script id="shipment-tracking" src="https://bridge-cdn.nyc3.digitaloceanspaces.com/tracking.js?apiId=9c28006b-b38f-45e3-894d-32c0d0599610"></script>
 

@@ -30,6 +30,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.min.css" rel="stylesheet">
 
+    <!-- Include Notie CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.min.js"></script>
+
     <!-- Owl Carosel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -163,42 +167,35 @@
                     </div>
                     <div class="col-md-8 p-5">
                         <h2>Get in touch</h2>
-                        <form class="contactForm mt-4">
+                        <form class="contactForm mt-4" id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control rounded border border-secondary"
-                                        id="firstName" required>
+                                    <input type="text" class="form-control rounded border border-secondary" id="firstName" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control rounded border border-secondary"
-                                        id="lastName" required>
+                                    <input type="text" class="form-control rounded border border-secondary" id="lastName" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control rounded border border-secondary" id="email"
-                                        required>
+                                    <input type="email" class="form-control rounded border border-secondary" id="email" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control rounded border border-secondary" id="phone"
-                                        required>
+                                    <input type="tel" class="form-control rounded border border-secondary" id="phone" required>
                                 </div>
-                                <div class="col-12 mb-3"> <!-- Set to col-12 for full width on small screens -->
+                                <div class="col-12 mb-3">
                                     <label for="interestedIn" class="form-label">Interested In</label>
-                                    <input type="text" class="form-control rounded border border-secondary"
-                                        id="interestedIn">
+                                    <input type="text" class="form-control rounded border border-secondary" id="interestedIn">
                                 </div>
-                                <div class="col-12 mb-3"> 
+                                <div class="col-12 mb-3">
                                     <label for="formFile" class="form-label">File Upload</label>
-                                    <input class="form-control rounded border border-secondary text-center p-2"
-                                        type="file" id="formFile">
+                                    <input class="form-control rounded border border-secondary text-center p-2" type="file" id="formFile">
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control rounded border border-secondary" id="message"
-                                        rows="3"></textarea>
+                                    <textarea class="form-control rounded border border-secondary" id="message" rows="3"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary mt-3 rounded">Submit</button>
@@ -247,16 +244,16 @@
                 </ul>
             </div>
             <div class="col-md-3 footer-links-col">
-                <h4>Services</h4>
-                <ul class="nav nav-footer-links flex-column">
-                <li><a href="#" class="nav-link">Ocean Freight</a></li>
-                <li><a href="#" class="nav-link">Air Freight</a></li>
-                <li><a href="#" class="nav-link">Land Freight</a></li>
-                <li><a href="#" class="nav-link">Warehouse Services</a></li>
-                <li><a href="#" class="nav-link">Insurance tab</a></li>
-                <li><a href="#" class="nav-link">Warehousing & Distibution</a></li>
-                </ul>
-            </div>
+              <h4>Services</h4>
+              <ul class="nav nav-footer-links flex-column">
+              <li><a href="services.html#ocean" class="nav-link">Ocean Freight</a></li>
+              <li><a href="services.html#air" class="nav-link">Air Freight</a></li>
+              <li><a href="services.html#land" class="nav-link">Land Freight</a></li>
+              <li><a href="services.html#custom-clearance" class="nav-link">Customs Clearance</a></li>
+              <li><a href="services.html#warehouse" class="nav-link">Warehouse Service</a></li>
+              <li><a href="services.html#docs" class="nav-link">Documentation</a></li>
+              </ul>
+          </div>
             <div class="col-md-2 footer-links-col">
                 <h4>Company</h4>
                 <ul class="nav nav-footer-links flex-column">
@@ -330,6 +327,41 @@
         } else {
             $('.navbar').removeClass('navbar-scrolled');
         }
+        });
+    </script>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+        
+            // Collect form data
+            let formData = new FormData();
+            formData.append('firstName', document.getElementById('firstName').value);
+            formData.append('lastName', document.getElementById('lastName').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('interestedIn', document.getElementById('interestedIn').value);
+            formData.append('message', document.getElementById('message').value);
+            formData.append('file', document.getElementById('formFile').files[0]);
+        
+            try {
+                // Call API using fetch
+                const response = await fetch('https://api.example.com/contact', {
+                    method: 'POST',
+                    body: formData
+                });
+        
+                if (response.ok) {
+                    notie.alert({ type: 'success', text: 'Your message was sent successfully!', time: 3 });
+                    // Reset the form after successful submission
+                    document.getElementById('contactForm').reset();
+                } else {
+                    const errorData = await response.json();
+                    notie.alert({ type: 'error', text: `Error: ${errorData.message}`, time: 3 });
+                }
+            } catch (error) {
+                notie.alert({ type: 'error', text: `Error: ${error.message}`, time: 3 });
+            }
         });
     </script>
 
